@@ -7,9 +7,6 @@
     --cor-transicaoBOtao: #fcf1a5;
 
 }
-
-
-
 body{
     background-image: url(../img/pexels-stephan-seeber-1054222.jpg);
     background-size: cover;
@@ -21,6 +18,9 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh
+}
+.hide{
+    display: none !important;
 }
 .container{
     background-color:var(--cor-primaria2);

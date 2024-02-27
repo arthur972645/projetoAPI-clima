@@ -12,7 +12,7 @@ const descricao = document.querySelector("#descricao")
 const imgDescricao = document.querySelector("#img-descricao")
 const umidade = document.querySelector("#umidade span") //span pois é um paragramo e o quea gente vai imprimir vindo da api vai esta dentro o samp
 const vento = document.querySelector("#vento span") //span pois é um paragramo e o quea gente vai imprimir vindo da api vai esta dentro o samp
-
+const resultadoContainer = document.querySelector("#box-resultado")
 
 
 //Função:
@@ -41,8 +41,10 @@ const mostrarValue = async (value) => {
     imgDescricao.setAttribute("src",`https://openweathermap.org/img/wn/${data.weather[0].icon}.png`)
     umidade.innerHTML = `${data.main.humidity}%`
     vento.innerHTML = `${data.wind.speed}km/h`
-}
 
+    resultadoContainer.classList.remove("hide")
+}
+//tratamento de erro
 const verificarbtn = (value) => {
     if(value === ''){
         alert('Preencha o campo com a sua cidade')
