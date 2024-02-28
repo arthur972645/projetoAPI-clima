@@ -1,5 +1,6 @@
 //seleção  de dados
 const baseURL = "6328fa0a4b8038333b021e60a631d64f"
+//  api do carrosel: https://openweathermap.org/forecast5
 //serve para pegar o 'dado' que será chamado ou não na API
 const valueInput = document.querySelector("#value-input")
 const btnPesquisar = document.querySelector("#btn-pesquisar")
