@@ -42,6 +42,9 @@ body{
     font-weight: 600;
     letter-spacing: 3px;
 }
+.login p:hover{
+    color: var(--cor-transicaoBOtao);
+}
 .box-usuario{
     /* border: 2px solid red; */
     margin-top: 15%;
@@ -63,6 +66,7 @@ body{
     background: transparent;
     border: 1px solid var(--cor-branco);
     color: var(--cor-branco);
+    padding: 15px;
     
 }
 .box-input input::placeholder{
@@ -71,6 +75,7 @@ body{
 }
 .box-input input:focus{
     outline: none;
+    border: 1px solid var(--cor-transicaoBOtao);
 }
 .box-senha{
     /* border: 2px solid red; */
@@ -91,6 +96,8 @@ body{
     border: none;
     background: transparent;
     border: 1px solid var(--cor-branco);
+    color: var(--cor-branco);
+    padding: 15px;
     
 }
 .box-senha-input input::placeholder{
@@ -99,8 +106,8 @@ body{
 }
 .box-senha-input input:focus{
     outline: none;
+    border: 1px solid var(--cor-transicaoBOtao);
 }
-
 .box-btn{
     /* border: 2px solid red; */
     display: flex;

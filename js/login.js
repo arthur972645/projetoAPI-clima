@@ -62,7 +62,7 @@ const passaword = document.getElementById('senha').value
 const login = data.find((objeto) => objeto.usuario === user && objeto.senha === passaword)
 
 if(login){
-    window.location = './pages/pagina-clima.html'
+    window.location = `./pages/pagina-clima.html`
 }else{
     alert('usuario não encontrado')
 }
