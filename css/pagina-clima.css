@@ -30,7 +30,12 @@ body{
     box-shadow: 0 0 10px #646464;
     color: var(--cor-branco);
     padding: 2rem;
+    /* transition: width 0.3s ease-out;
+    overflow: hidden; */
 }
+/* .expande{
+    width: 300px;
+} */
 
 /* boox-formulari */
 .box-formulario{
@@ -116,4 +121,11 @@ h3{
     font-family: "Ubuntu", sans-serif;
     font-size: 20px;
 }
-
+/* .saiba-mais{
+    border: 2px solid red;
+    display:  flex;
+    justify-content: end;
+}
+.saiba-mais p{
+    cursor: pointer;
+} */

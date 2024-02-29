@@ -1,5 +1,6 @@
 //seleção  de dados
-const baseURL = "6328fa0a4b8038333b021e60a631d64f"
+// const baseURL = "6328fa0a4b8038333b021e60a631d64f"
+const baseURL2 = "d6a6d21a29db56a57f9336ce41e5166e"
 //  api do carrosel: https://openweathermap.org/forecast5
 //serve para pegar o 'dado' que será chamado ou não na API
 const valueInput = document.querySelector("#value-input")
@@ -20,7 +21,9 @@ const resultadoContainer = document.querySelector("#box-resultado")
 
 //função que vai conferir la na api
 const verificaAPI = async(value) => { //value = nome da cidade
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${value}&units=metric&appid=${baseURL}&lang=pt_br`;
+    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${value}&units=metric&appid=${baseURL2}&lang=pt_br`
+    // https://api.openweathermap.org/data/2.5/weather?q=${value}&units=metric&appid=${baseURL}&lang=pt_br
+    // https://api.openweathermap.org/data/2.5/forecast?q=${value}&units=metric&appid=${baseURL}&lang=pt_br`;
 
     //O fetch(url) vai fazer uma solicitação a API, vai la da uma olhada nela
     //O await é para so continuar, ou seja, ir para outra linha quando a chamada da api for concluida
@@ -36,12 +39,12 @@ const verificaAPI = async(value) => { //value = nome da cidade
 //mostrar o valor pro usuario: 
 const mostrarValue = async (value) => {
     const data = await verificaAPI(value)
-    cidade.innerHTML = data.name
-    temperatura.innerHTML = parseInt(data.main.temp)
-    descricao.innerHTML = data.weather[0].description
-    imgDescricao.setAttribute("src",`https://openweathermap.org/img/wn/${data.weather[0].icon}.png`)
-    umidade.innerHTML = `${data.main.humidity}%`
-    vento.innerHTML = `${data.wind.speed}km/h`
+    cidade.innerHTML = data.city.name
+    temperatura.innerHTML = parseInt(data.list[0].main.temp)
+    descricao.innerHTML = data.list[0].weather[0].description
+    imgDescricao.setAttribute("src",`https://openweathermap.org/img/wn/${data.list[0].weather[0].icon}.png`)
+    umidade.innerHTML = `${data.list[0].main.humidity}%`
+    vento.innerHTML = `${data.list[0].wind.speed}km/h`
 
     resultadoContainer.classList.remove("hide")
 }
@@ -54,6 +57,10 @@ const verificarbtn = (value) => {
     }
 }
 
+// function expandirContainer(){
+//     const minhaDiv = document.getElementById('minhaDiv')
+//     minhaDiv.classList.toggle('expande')
+// }
 
 //Eventos:
 
