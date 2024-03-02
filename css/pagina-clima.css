@@ -5,6 +5,8 @@
     --cor-primaria2:#2d3250bf ;
     --cor-branco: #fdfdfd;
     --cor-transicaoBOtao: #fcf1a5;
+    --cor-cards: #1820513d;
+
 
 }
 body{
@@ -30,14 +32,24 @@ body{
     box-shadow: 0 0 10px #646464;
     color: var(--cor-branco);
     padding: 2rem;
-    /* transition: width 0.3s ease-out;
-    overflow: hidden; */
+    overflow-y: auto;
+    backdrop-filter: blur(4px);
 }
-/* .expande{
-    width: 300px;
-} */
+.container::-webkit-scrollbar{
+    width: 5px
+}
+.container::-webkit-scrollbar-track{
+    background: transparent;
+    
+}
+.container::-webkit-scrollbar-thumb{
+    background-color: var(--cor-primaria);
+    border-radius: 10px;
+}
+.container::-webkit-scrollbar-button{
+    background: transparent;
+}
 
-/* boox-formulari */
 .box-formulario{
     /* border: 1px solid red; */
     flex-direction:column;
@@ -51,13 +63,27 @@ h3{
 }
 .box-input{
     display: flex;
+
 }
 .container input{
     padding: .8rem;
     border: none;
     border-radius: 8px;
     min-width: 200px;
-    background-color: var(--cor-branco);
+    border: none;
+    background: transparent;
+    border: 1px solid var(--cor-branco);
+    color: var(--cor-branco);
+    transition: background-color 0.3s ease;
+}
+.container input::placeholder{
+    color: var(--cor-branco);
+    text-indent: 10px;
+}
+.container input:focus{
+    background-color: transparent;
+    outline: none;
+    border: 1px solid var(--cor-transicaoBOtao);
 }
 .container button{
     border-radius: 8px;
@@ -83,22 +109,33 @@ h3{
     letter-spacing: 2px;
 }
 .box-temperatura{
-     border:  1px solid white;
+     /* border:  1px solid white; */
     display: flex;
     justify-content: space-around;
     font-family: "Ubuntu" ,sans-serif;
     font-size: 40px;
     font-weight: 600;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 200px;
+   
 }
-.box-seta{
-    border: 2px solid red;
-    align-self: center;
+.box-temp-desc{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
 }
 .box-descricao{
     /* border: 2px solid wheat;  */
     display: flex;
     flex-direction: row;
     justify-content: center;
+    
+    border-radius: 10px;
+    width: 200px;
+    margin-top: 10px;
 }
 .texto-descricao{
     /* border: 2px solid wheat;  */
@@ -121,7 +158,173 @@ h3{
 
 }
 
+
 .detalhes-descricao p{
     font-family: "Ubuntu", sans-serif;
     font-size: 20px;
+    border-radius: 10px;
+    padding: 5px;
+}
+.box-days{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 15px;
+    padding: 10px;
+    font-weight: 600;
+    font-family: "Ubuntu", sans-serif ;
+    
+}
+.box-day1{
+    /* border: 1px solid purple; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 5px;
+    background-color: var(--cor-cards);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #363636;
+    
+}
+.box-time1 p{
+    margin-bottom: 0;
+}
+.box-img1 img{
+    margin-top: 0;
+}
+.temperatura-day1 p{
+    margin-top: 0;
+}
+.box-day2{
+    /* border: 1px solid purple; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 5px;
+    background-color: var(--cor-cards);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #363636;
+    
+}
+.box-time2 p{
+    margin-bottom: 0;
+}
+.box-img2 img{
+    margin-top: 0;
+}
+.temperatura-day2 p{
+    margin-top: 0;
+}
+.box-day3{
+    /* border: 1px solid purple; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 5px;
+    background-color: var(--cor-cards);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #363636;
+    
+}
+.box-time3 p{
+    margin-bottom: 0;
+}
+.box-img3 img{
+    margin-top: 0;
+}
+.temperatura-day3 p{
+    margin-top: 0;
+}
+.box-day4{
+    /* border: 1px solid purple; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+   
+    padding: 5px;
+    background-color: var(--cor-cards);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #363636;
+    
+}
+.box-time4 p{
+    margin-bottom: 0;
+}
+.box-img4 img{
+    margin-top: 0;
+}
+.temperatura-day4 p{
+    margin-top: 0;
+}
+.box-day5{
+    /* border: 1px solid purple; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    
+    padding: 5px;
+    background-color: var(--cor-cards);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #363636;
+    
+}
+.box-time5 p{
+    margin-bottom: 0;
+}
+.box-img5 img{
+    margin-top: 0;
+}
+.temperatura-day5 p{
+    margin-top: 0;
+}
+.box-day6{
+    /* border: 1px solid purple; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    
+    padding: 5px;
+    background-color: var(--cor-cards);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #363636;
+    
+}
+.box-time6 p{
+    margin-bottom: 0;
+}
+.box-img6 img{
+    margin-top: 0;
+}
+.temperatura-day6 p{
+    margin-top: 0;
+}
+.box-day7{
+    /* border: 1px solid purple; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    
+    padding: 5px;
+    background-color: var(--cor-cards);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #363636;
+    
+}
+.box-time7 p{
+    margin-bottom: 0;
+}
+.box-img7 img{
+    margin-top: 0;
+}
+.temperatura-day7 p{
+    margin-top: 0;
 }

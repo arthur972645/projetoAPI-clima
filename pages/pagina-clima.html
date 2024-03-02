@@ -9,10 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="container" id="minhaDiv">
-        <!-- <div class="saiba-mais">
-            <p id="saiba-mais" onclick="expandirContainer()">Saiba mais</p>
-        </div> -->
+    <div class="container" >
         <div class="box-formulario">
             <h3>Descubra o clima da cidade: </h3>
             <div class="box-input">
@@ -30,39 +27,112 @@
                     <span id="cidade"></span>
                 </i>
             </div>
-            <div class="box-temperatura">
-                <p id="temperatura"><span></span>&deg;C</p>
-                <div class="box-seta">
-                    <i class="fas fa-arrow-right"></i>
+            <div class="box-temp-desc">
+                <div class="box-temperatura">
+                    <p id="temperatura"><span></span>&deg;C</p>
                 </div>
-                
-            </div>
-           
-            <div class="box-descricao">
-                <div class="texto-descricao">
-                    <span id="descricao"></span>
+                <div class="box-descricao">
+                    <div class="texto-descricao">
+                        <span id="descricao"></span>
+                    </div>
+                    <img src="https://openweathermap.org/img/wn/01d.png" alt="descricao do clima" id="img-descricao">
                 </div>
-                <img src="https://openweathermap.org/img/wn/01d.png" alt="descricao do clima" id="img-descricao">
             </div>
-            <div class="detalhes-descricao">
-                <p id="umidade">
-                    <i class="fa-solid fa-droplet"></i>
-                    <span></span>
-                </p>
-                <p id="vento">
-                    <i class="fa-solid fa-wind"></i>
-                    <span></span>
-                </p>
+                <div class="detalhes-descricao">
+                    <p id="umidade">
+                        <i class="fa-solid fa-droplet"></i>
+                        <span></span>
+                    </p>
+                    <p id="vento">
+                        <i class="fa-solid fa-wind"></i>
+                        <span></span>
+                    </p>
+                </div>
+                <hr>
+                <div class="box-days">
+                    <div class="box-day1">
+                        <div class="box-time1">
+                            <p id="time1">00:00 - 03:00</p>
+                        </div>
+                        <div class="box-img1">
+                            <img src="https://openweathermap.org/img/wn/01d.png" alt="descrição do clima" id="img-descricao-day1">
+                        </div>
+                        <div class="temperatura-day1">
+                            <p id="temperatura1"><span></span>&degC</p>
+                        </div>
+                    </div>
+                    <div class="box-day2">
+                        <div class="box-time2">
+                            <p id="time2">03:00 - 06:00</p>
+                        </div>
+                        <div class="box-img2">
+                            <img src="https://openweathermap.org/img/wn/01d.png" alt="descrição do clima" id="img-descricao-day2">
+                        </div>
+                        <div class="temperatura-day2">
+                            <p id="temperatura2"><span></span>&deg;C</p>
+                        </div>
+                    </div>
+                    <div class="box-day3">
+                        <div class="box-time3">
+                            <p id="time3">06:00 - 09:00</p>
+                        </div>
+                        <div class="box-img3">
+                            <img src="https://openweathermap.org/img/wn/01d.png" alt="descrição do clima" id="img-descricao-day3">
+                        </div>
+                        <div class="temperatura-day3">
+                            <p id="temperatura3"><span></span>&deg;C</p>
+                        </div>
+                    </div>
+                    <div class="box-day4">
+                        <div class="box-time4">
+                            <p id="time4">09:00 - 12:00</p>
+                        </div>
+                        <div class="box-img4">
+                            <img src="https://openweathermap.org/img/wn/01d.png" alt="descrição do clima" id="img-descricao-day4">
+                        </div>
+                        <div class="temperatura-day4">
+                            <p id="temperatura4"><span></span>&deg;C</p>
+                        </div>
+                    </div>
+                    <div class="box-day5">
+                        <div class="box-time5">
+                            <p id="time5">12:00 - 15:00</p>
+                        </div>
+                        <div class="box-img5">
+                            <img src="https://openweathermap.org/img/wn/01d.png" alt="descrição do clima" id="img-descricao-day5">
+                        </div>
+                        <div class="temperatura-day5">
+                            <p id="temperatura5"><span></span>&deg;C</p>
+                        </div>
+                    </div>
+                    <div class="box-day6">
+                        <div class="box-time6">
+                            <p id="time6">15:00 - 18:00</p>
+                        </div>
+                        <div class="box-img6">
+                            <img src="https://openweathermap.org/img/wn/01d.png" alt="descrição do clima" id="img-descricao-day6">
+                        </div>
+                        <div class="temperatura-day6">
+                            <p id="temperatura6"><span></span>&deg;C</p>
+                        </div>
+                    </div>
+                    <div class="box-day7">
+                        <div class="box-time7">
+                            <p id="time7">18:00 - 21:00</p>
+                        </div>
+                        <div class="box-img7">
+                            <img src="https://openweathermap.org/img/wn/01d.png" alt="descrição do clima" id="img-descricao-day7">
+                        </div>
+                        <div class="temperatura-day7">
+                            <p id="temperatura7"><span></span>&deg;C</p>
+                        </div>
+                    </div>
+                </div>
+                    
             </div>
-            
-
-        </div>
     </div>
-   
     
-
-
-
+   
     <script src="../js/pagina-clima.js"></script>
 </body>
 </html>
